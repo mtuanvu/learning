@@ -1,5 +1,5 @@
 let fullName = "Mai Tuấn Vũ";
-let age = 18;
+// let age = 18;
 let a = 4;
 let b = 10;
 
@@ -37,3 +37,7 @@ let b = 10;
 // if (a > 0 && b > 0) {
 //   alert("a va b deu la so lon hong 0"); toán tử && được thực thi khi tất cả điều kiện bên trong đều đúng
 // };
+
+let age = 35;
+let nextAge = ++age;
+console.log(nextAge);
