@@ -79,14 +79,41 @@ console.log(sum);*/
 // }
 // console.log(run({ name: "Nguyen Van A", age: 16 }));
 
-var myArray = [
-  [1, 2],
-  [5, 7],
-  [8, 9],
+// var myArray = [
+//   [1, 2],
+//   [5, 7],
+//   [8, 9],
+// ];
+
+// for (var i = 0; i < myArray.length; i++) {
+//   for (var j = 0; j < myArray[i].length; j++) {
+//     console.log(myArray[i][j]);
+//   }
+// }
+
+const sports = [
+  {
+    name: "Bóng rổ",
+    like: 6,
+  },
+  {
+    name: "Bóng đá",
+    like: 4,
+  },
+  {
+    name: "Bóng bàn",
+    like: 5,
+  },
+  {
+    name: "Bóng hồng",
+    like: 9,
+  },
 ];
 
-for (var i = 0; i < myArray.length; i++) {
-  for (var j = 0; j < myArray[i].length; j++) {
-    console.log(myArray[i][j]);
-  }
+function getMostFavoriteSport(array) {
+  return sports.filter(function (score) {
+    return score.like >= 5;
+  });
 }
+
+console.log(getMostFavoriteSport(sports));
