@@ -69,12 +69,24 @@ console.log(sum);*/
 
 // console.log(getTotal(orders));
 
-function run(object) {
-  var arr = [];
-  for (var key in object) {
-    arr.push(`Thuộc tính ${key} có giá trị ${object[key]}`);
-  }
+// function run(object) {
+//   var arr = [];
+//   for (var key in object) {
+//     arr.push(`Thuộc tính ${key} có giá trị ${object[key]}`);
+//   }
 
-  return arr;
+//   return arr;
+// }
+// console.log(run({ name: "Nguyen Van A", age: 16 }));
+
+var myArray = [
+  [1, 2],
+  [5, 7],
+  [8, 9],
+];
+
+for (var i = 0; i < myArray.length; i++) {
+  for (var j = 0; j < myArray[i].length; j++) {
+    console.log(myArray[i][j]);
+  }
 }
-console.log(run({ name: "Nguyen Van A", age: 16 }));
