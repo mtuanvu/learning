@@ -1,4 +1,4 @@
-/*//Ví dụ 1 Random
+//Ví dụ 1 Random
 function getRandNumbers(min, max, length) {
   if (min > max) {
     [min, max] = [max, min];
@@ -10,13 +10,10 @@ function getRandNumbers(min, max, length) {
   }
   return array;
 }
-
-
 const array = getRandNumbers(1, 94, 5);
-console.log(array);
-*/
+// console.log(array);
 
-/*//Ví dụ 2 vong lập for
+//Ví dụ 2 vong lập for
 function getTotal(numbers) {
   let total = 0;
   for (let i = 0; i < numbers.length; i++) {
@@ -24,137 +21,130 @@ function getTotal(numbers) {
   }
   return total;
 }
-
 const myNumber = [1, 6, 8, 9, 10, 34];
 const sum = getTotal(myNumber);
-console.log(sum);*/
+// console.log(sum);
 
 //Ví dụ 3 vòng for
-// var myArray = ["Javascript", "Dart", "PHP", "Java", "C++", "C"];
+var myArray = ["Javascript", "Dart", "PHP", "Java", "C++", "C"];
+var arrayLength = myArray.length;
+for (var i = 0; i < arrayLength; i++) {
+  // console.log(myArray[i]);
+}
 
-// var arrayLength = myArray.length;
+// Ví dụ 4 thực hành for
+var orders = [
+  {
+    name: "Khóa học Javascript",
+    price: 15000,
+  },
 
-// for (var i = 0; i < arrayLength; i++) {
-//   console.log(myArray[i]);
-// }
+  {
+    name: "Khóa học Java",
+    price: 20000,
+  },
+  {
+    name: "Khóa học PHP",
+    price: 24000,
+  },
+  {
+    name: "Khóa học Dart",
+    price: 26300,
+  },
+];
 
-//Ví dụ 4 thực hành for
-// var orders = [
-//   {
-//     name: "Khóa học Javascript",
-//     price: 15000,
-//   },
+function getTotal(orders) {
+  const total = orders.reduce((acc, order) => acc + order.price, 0);
 
-//   {
-//     name: "Khóa học Java",
-//     price: 20000,
-//   },
-//   {
-//     name: "Khóa học PHP",
-//     price: 24000,
-//   },
-//   {
-//     name: "Khóa học Dart",
-//     price: 26300,
-//   },
-// ];
-
-// function getTotal(orders) {
-//   const total = orders.reduce((acc, order) => acc + order.price, 0);
-
-//   return total;
-// }
-
-// getTotal(orders);
-
+  return total;
+}
+getTotal(orders);
 // console.log(getTotal(orders));
 
-// function run(object) {
-//   var arr = [];
-//   for (var key in object) {
-//     arr.push(`Thuộc tính ${key} có giá trị ${object[key]}`);
-//   }
+function run(object) {
+  var arr = [];
+  for (var key in object) {
+    arr.push(`Thuộc tính ${key} có giá trị ${object[key]}`);
+  }
 
-//   return arr;
-// }
+  return arr;
+}
 // console.log(run({ name: "Nguyen Van A", age: 16 }));
 
-// var myArray = [
-//   [1, 2],
-//   [5, 7],
-//   [8, 9],
-// ];
+var myArray = [
+  [1, 2],
+  [5, 7],
+  [8, 9],
+];
 
-// for (var i = 0; i < myArray.length; i++) {
-//   for (var j = 0; j < myArray[i].length; j++) {
-//     console.log(myArray[i][j]);
-//   }
-// }
+for (var i = 0; i < myArray.length; i++) {
+  for (var j = 0; j < myArray[i].length; j++) {
+    // console.log(myArray[i][j]);
+  }
+}
 
-// const sports = [
-//   {
-//     name: "Bóng rổ",
-//     like: 6,
-//   },
-//   {
-//     name: "Bóng đá",
-//     like: 4,
-//   },
-//   {
-//     name: "Bóng bàn",
-//     like: 5,
-//   },
-//   {
-//     name: "Bóng hồng",
-//     like: 9,
-//   },
-// ];
+const sports = [
+  {
+    name: "Bóng rổ",
+    like: 6,
+  },
+  {
+    name: "Bóng đá",
+    like: 4,
+  },
+  {
+    name: "Bóng bàn",
+    like: 5,
+  },
+  {
+    name: "Bóng hồng",
+    like: 9,
+  },
+];
 
-// function getMostFavoriteSport(array) {
-//   return sports.filter(function (score) {
-//     return score.like >= 5;
-//   });
-// }
-
+function getMostFavoriteSport(array) {
+  return sports.filter(function (score) {
+    return score.like >= 5;
+  });
+}
 // console.log(getMostFavoriteSport(sports));
 
-// var sports = [
-//   {
-//     name: "Bơi lội",
-//     gold: 11,
-//   },
-//   {
-//     name: "Boxing",
-//     gold: 3,
-//   },
-//   {
-//     name: "Đạp xe",
-//     gold: 4,
-//   },
-//   {
-//     name: "Đấu kiếm",
-//     gold: 5,
-//   },
-// ];
+var sportss = [
+  {
+    name: "Bơi lội",
+    gold: 11,
+  },
+  {
+    name: "Boxing",
+    gold: 3,
+  },
+  {
+    name: "Đạp xe",
+    gold: 4,
+  },
+  {
+    name: "Đấu kiếm",
+    gold: 5,
+  },
+];
 
-// var totalGold = sports.reduce(function getTotalGold(accumulator, currentValue) {
-//   return accumulator + currentValue.gold;
-// }, 0);
-
+var totalGold = sports.reduce(function getTotalGold(accumulator, currentValue) {
+  return accumulator + currentValue.gold;
+}, 0);
 // console.log(totalGold);
 
-// function getTotalGold(sports) {
-//   return sports.reduce(
-//     (accumulator, currentValue) => accumulator + currentValue.gold,
-//     0
-//   );
-// }
+function getTotalGold(sports) {
+  return sports.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.gold,
+    0
+  );
+}
 // console.log(getTotalGold(sports));
-// var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
-// var flatArray = depthArray.reduce(function (flatOutput, depItem) {
-//   return flatOutput.concat(depItem);
-// }, []);
 
+var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+var flatArray = depthArray.reduce(function (flatOutput, depItem) {
+  return flatOutput.concat(depItem);
+}, []);
 // console.log(flatArray);
 
 var watchList = [
@@ -268,4 +258,18 @@ function calculateRating(arr) {
 }
 
 // Expected results
-console.log(calculateRating(watchList)); // Output: 8.675
+// console.log(calculateRating(watchList)); // Output: 8.675
+
+function arrToObj(arr) {
+  return arr.reduce((obj, [key, value]) => {
+    obj[key] = value;
+    return obj;
+  }, {});
+}
+
+// Expected results:
+var arr = [
+  ["name", "Sơn Đặng"],
+  ["age", 18],
+];
+console.log(arrToObj(arr)); // { name: 'Sơn Đặng', age: 18 }
