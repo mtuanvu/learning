@@ -91,29 +91,62 @@ console.log(sum);*/
 //   }
 // }
 
-const sports = [
+// const sports = [
+//   {
+//     name: "Bóng rổ",
+//     like: 6,
+//   },
+//   {
+//     name: "Bóng đá",
+//     like: 4,
+//   },
+//   {
+//     name: "Bóng bàn",
+//     like: 5,
+//   },
+//   {
+//     name: "Bóng hồng",
+//     like: 9,
+//   },
+// ];
+
+// function getMostFavoriteSport(array) {
+//   return sports.filter(function (score) {
+//     return score.like >= 5;
+//   });
+// }
+
+// console.log(getMostFavoriteSport(sports));
+
+var sports = [
   {
-    name: "Bóng rổ",
-    like: 6,
+    name: "Bơi lội",
+    gold: 11,
   },
   {
-    name: "Bóng đá",
-    like: 4,
+    name: "Boxing",
+    gold: 3,
   },
   {
-    name: "Bóng bàn",
-    like: 5,
+    name: "Đạp xe",
+    gold: 4,
   },
   {
-    name: "Bóng hồng",
-    like: 9,
+    name: "Đấu kiếm",
+    gold: 5,
   },
 ];
 
-function getMostFavoriteSport(array) {
-  return sports.filter(function (score) {
-    return score.like >= 5;
-  });
+function getTotalGold(sports) {
+  return sports.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.gold,
+    0
+  );
 }
 
-console.log(getMostFavoriteSport(sports));
+console.log(getTotalGold(sports));
+var toTal = sports.reduce(function getTotalGold(accumulator, currentValue) {
+  return accumulator + currentValue.gold;
+}, 0);
+
+console.log(toTal);
