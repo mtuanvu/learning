@@ -137,16 +137,16 @@ var sports = [
   },
 ];
 
-function getTotalGold(sports) {
-  return sports.reduce(
-    (accumulator, currentValue) => accumulator + currentValue.gold,
-    0
-  );
-}
-
-console.log(getTotalGold(sports));
-var toTal = sports.reduce(function getTotalGold(accumulator, currentValue) {
+var totalGold = sports.reduce(function getTotalGold(accumulator, currentValue) {
   return accumulator + currentValue.gold;
 }, 0);
 
-console.log(toTal);
+console.log(totalGold);
+
+// function getTotalGold(sports) {
+//   return sports.reduce(
+//     (accumulator, currentValue) => accumulator + currentValue.gold,
+//     0
+//   );
+// }
+// console.log(getTotalGold(sports));
